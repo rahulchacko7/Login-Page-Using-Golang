@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/632/382/363/abstract-waveforms-blue-background-lines-wallpaper-preview.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            margin-top: 10%;
+        }
+
+        .signup-box {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .signup-box h1 {
+            text-align: center;
+            color: #007bff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .form-control {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-bottom: 2px solid #007bff;
+            border-radius: 0;
+            margin-bottom: 20px;
+        }
+
+        .form-control:focus {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-color: #0056b3;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="signup-box">
+                    <h1>Sign Up</h1>
+                    <form method="POST" action="/signup"> <!-- Specify the signup action URL -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="Signup">Sign Up</button>
+                    </form>
+                    <p class="signup-link">Already have an account? <a href="/templates/index.login.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
